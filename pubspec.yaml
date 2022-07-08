@@ -1,5 +1,5 @@
 name: web3d
-description: flutter_web3 wrapper
+description: klaytn support for flutter_web3
 version: 1.0.0
 repository: https://github.com/somnium-labs/web3d
 issue_tracker: https://github.com/somnium-labs/web3d/issues

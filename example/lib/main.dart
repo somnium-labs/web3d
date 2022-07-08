@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web3/flutter_web3.dart';
+import 'package:flutter_web3/web3d.dart';
 import 'package:get/get.dart';
 
 void main() {
