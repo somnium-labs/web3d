@@ -60,15 +60,22 @@ class Ethereum extends Interop<_EthereumImpl> {
   /// Modern Ethereum provider api, injected by many famous environment such as `MetaMask` or `TrustWallet`.
   static Ethereum get ethereum => Ethereum._(_ethereum!);
 
+  /// Kaikas
+  static Ethereum get klaytn => Ethereum._(_klaytn!);
+
   /// Getter for boolean to detect Ethereum object support. without calling itself to prevent js undefined error.
   static bool get isSupported =>
-      hasProperty(_window, 'ethereum') || hasProperty(_window, 'BinanceChain');
+      hasProperty(_window, 'ethereum') ||
+      hasProperty(_window, 'BinanceChain') ||
+      hasProperty(_window, 'klaytn');
 
   /// Getter for default Ethereum provider object, cycles through available injector in environment.
   static Ethereum? get provider => isSupported
       ? _ethereum != null
           ? Ethereum._(_ethereum!)
-          : Ethereum._(_binanceChain!)
+          : _binanceChain != null
+              ? Ethereum._(_binanceChain!)
+              : Ethereum._(_klaytn!)
       : null;
 
   /// Old web3 object, deprecated now.
