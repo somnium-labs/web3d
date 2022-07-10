@@ -1,1 +1,1 @@
-klaytn support for web3d
+This project was forked from flutter_web3 to support klaytn.
