@@ -382,7 +382,9 @@ class Web3Provider extends Provider<_Web3ProviderImpl> {
     assert(provider != null, 'Provider must not be null.');
     assert(
         provider is Interop &&
-            (provider is Ethereum || provider is WalletConnectProvider),
+            (provider is Ethereum ||
+                provider is WalletConnectProvider ||
+                provider is Klaytn),
         'Provider type must be valid.');
     return Web3Provider._(
       _Web3ProviderImpl((provider as Interop).impl),
@@ -416,6 +418,9 @@ class Web3Provider extends Provider<_Web3ProviderImpl> {
   /// ```
   factory Web3Provider.fromWalletConnect(WalletConnectProvider walletConnect) =>
       Web3Provider._(_Web3ProviderImpl(walletConnect.impl));
+
+  factory Web3Provider.fromKlaytn(Klaytn klaytn) =>
+      Web3Provider._(_Web3ProviderImpl(klaytn.impl));
 
   const Web3Provider._(_Web3ProviderImpl impl) : super._(impl);
 

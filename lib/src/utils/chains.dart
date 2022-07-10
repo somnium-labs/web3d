@@ -1,4 +1,4 @@
-import 'package:flutter_web3/src/ethereum/ethereum.dart';
+import 'package:web3d/src/ethereum/ethereum.dart';
 
 enum Chains {
   Mainnet,
