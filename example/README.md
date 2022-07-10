@@ -1,3 +1,3 @@
-# flutter_web3_example
+# web3d_example
 
-Demonstrates how to use the flutter_web3 plugin.
+Demonstrates how to use the web3d plugin.

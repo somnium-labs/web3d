@@ -2,7 +2,7 @@
 # See https://dart.dev/tools/pub/glossary#lockfile
 packages:
   amdjs:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: amdjs
       url: "https://pub.dartlang.org"
@@ -57,13 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.16.0"
-  cupertino_icons:
-    dependency: "direct main"
-    description:
-      name: cupertino_icons
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.3"
   dom_tools:
     dependency: transitive
     description:
@@ -95,13 +88,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  get:
-    dependency: "direct main"
-    description:
-      name: get
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.1.4"
   intl:
     dependency: transitive
     description:
@@ -110,12 +96,12 @@ packages:
     source: hosted
     version: "0.17.0"
   js:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: js
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.3"
+    version: "0.6.4"
   json_object_mapper:
     dependency: transitive
     description:
@@ -145,7 +131,7 @@ packages:
     source: hosted
     version: "0.1.4"
   meta:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: meta
       url: "https://pub.dartlang.org"
@@ -233,13 +219,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.2"
-  web3d:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "1.0.0"
 sdks:
   dart: ">=2.17.0-0 <3.0.0"
   flutter: ">=1.20.0"

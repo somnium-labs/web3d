@@ -6,9 +6,6 @@ external _EthereumImpl? get _binanceChain;
 @JS("ethereum")
 external _EthereumImpl? get _ethereum;
 
-@JS("klaytn")
-external _EthereumImpl? get _klaytn;
-
 @deprecated
 @JS("web3")
 external _EthereumImpl? get _web3;
