@@ -38,7 +38,8 @@ class Klaytn extends Interop<_KlaytnImpl> {
       (await send('klay_accounts')).map((e) => e.toString()).toList();
 
   Future<dynamic> send(String method, [dynamic params]) async {
-    return (await promiseToFuture<dynamic>(impl.send(method, params))).result;
+    return (await promiseToFuture<_RpcResponse>(impl.send(method, params)))
+        .result;
   }
 
   Future<int> getChainId() async => int.parse(await send('klay_chainId'));
