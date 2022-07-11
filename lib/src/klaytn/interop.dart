@@ -6,17 +6,22 @@ external Object get _window;
 @JS("klaytn")
 external _KlaytnImpl? get _klaytn;
 
-// @JS("caver.klay.call")
-// external dynamic stringify(dynamic obj);
-
 @JS()
 @anonymous
 class _KlaytnImpl {
   external enable();
-  external send(String method, [dynamic params]);
+  external _RpcResponse send(String method, [dynamic params]);
   external on(String eventName, Function callback);
   external String? get selectedAddress;
   external bool isConnected();
+}
+
+@JS("RpcResponse")
+@anonymous
+class _RpcResponse {
+  external int get id;
+  external String get jsonrpc;
+  external dynamic get result;
 }
 
 @JS("caver.klay.call")
